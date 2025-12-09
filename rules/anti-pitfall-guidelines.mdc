@@ -1,0 +1,20 @@
+---
+alwaysApply: false
+---
+---
+alwaysApply: false
+---
+
+# Anti-Pitfall Planning Guidelines
+
+When creating plans, follow these principles:
+
+1. **MVP First**: Focus on core functionality before adding features
+
+2. **Dependency Awareness**: Identify and sequence dependent tasks clearly
+
+3. **Iterative Milestones**: Break work into independently valuable chunks
+
+4. **Avoid Over-Engineering**: Start with the happy path, add edge cases later
+
+5. **Clear Scope**: Separate must-haves from nice-to-haves explicitly
