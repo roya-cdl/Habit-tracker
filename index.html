@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Habit Tracker</h1>
+            <p class="subtitle">Build better habits, one day at a time</p>
+        </header>
+
+        <main>
+            <!-- Add Habit Form -->
+            <section class="add-habit-section" aria-labelledby="add-habit-heading">
+                <h2 id="add-habit-heading">Add New Habit</h2>
+                <form id="habit-form" class="habit-form" aria-label="Add new habit">
+                    <div class="form-group">
+                        <label for="habit-name" class="sr-only">Habit Name</label>
+                        <input 
+                            type="text" 
+                            id="habit-name" 
+                            name="habit-name" 
+                            placeholder="e.g., Exercise, Read, Meditate"
+                            maxlength="50"
+                            required
+                            aria-required="true"
+                            aria-describedby="habit-name-help"
+                        >
+                        <small id="habit-name-help" class="help-text">
+                            Enter a habit name (1-50 characters)
+                        </small>
+                        <div id="habit-name-error" class="error-message" role="alert" aria-live="polite"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Habit</button>
+                </form>
+            </section>
+
+            <!-- Habits List -->
+            <section class="habits-section" aria-labelledby="habits-heading">
+                <div class="section-header">
+                    <h2 id="habits-heading">My Habits</h2>
+                    <div class="actions">
+                        <button id="export-btn" class="btn btn-secondary" aria-label="Export habits data">Export</button>
+                        <button id="import-btn" class="btn btn-secondary" aria-label="Import habits data">Import</button>
+                        <input type="file" id="import-file" accept=".json" style="display: none;" aria-label="Select file to import">
+                    </div>
+                </div>
+                
+                <div id="empty-state" class="empty-state" role="status" aria-live="polite">
+                    <p>No habits yet. Create your first habit to get started!</p>
+                </div>
+
+                <div id="habits-list" class="habits-list" role="list" aria-label="List of habits"></div>
+            </section>
+
+            <!-- Statistics Section -->
+            <section class="stats-section" aria-labelledby="stats-heading">
+                <h2 id="stats-heading">Statistics</h2>
+                <div id="stats-content" class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value" id="total-habits">0</div>
+                        <div class="stat-label">Total Habits</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="active-streaks">0</div>
+                        <div class="stat-label">Active Streaks</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="longest-streak">0</div>
+                        <div class="stat-label">Longest Streak</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="today-completed">0</div>
+                        <div class="stat-label">Completed Today</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Toast Notification -->
+        <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"></div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

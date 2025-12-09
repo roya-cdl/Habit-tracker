@@ -1,0 +1,19 @@
+{
+  "name": "habit-tracker",
+  "version": "1.0.0",
+  "description": "A modern habit tracking application with streak tracking and statistics",
+  "type": "module",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve . --listen 3000"
+  },
+  "keywords": [
+    "habit-tracker",
+    "productivity",
+    "tracking",
+    "streaks"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {}
+}
