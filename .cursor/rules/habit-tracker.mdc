@@ -1,0 +1,30 @@
+---
+alwaysApply: false
+---
+
+# Habit Tracker Project Rules
+
+## TypeScript & Component Guidelines
+
+- **TypeScript Required**: All code must be written in TypeScript with proper type definitions
+- **Small, Focused Components**: Create small, single-responsibility components
+  - Each component should have a clear, focused purpose
+  - Prefer composition over large monolithic components
+  - Keep components under 200 lines when possible
+- **Type Safety**: Define interfaces for all data structures (Habit, AppState, etc.)
+- **No `any` Types**: Avoid using `any` - use proper types or `unknown` when necessary
+
+## Planning & Scope
+
+- **Follow @anti-pitfall-guidelines**: Always reference and follow the anti-pitfall planning guidelines when creating plans or making architectural decisions
+- **MVP Scope**: Keep all work within the MVP scope defined in @.cursor/plans/habit-tracker-mvp.md
+  - Do not add features outside the MVP scope (edit/delete habits, historical views, etc.)
+  - Focus on core habit-tracking loop: add, track, streak display
+  - If suggesting features beyond MVP, clearly mark them as "out of scope" or "future enhancement"
+
+## Development Principles
+
+- **Dependency Awareness**: Identify and sequence dependent tasks clearly
+- **Iterative Milestones**: Complete milestones fully before moving to the next
+- **Avoid Over-Engineering**: Start with happy path, add edge cases incrementally
+- **Clear Scope**: Separate must-haves from nice-to-haves explicitly
